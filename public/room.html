@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bfbc1ab4a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/global.css">
+    <link rel="stylesheet" href="../static/css/room.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Grape+Nuts&family=Patua+One&family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>Rooms</title>
+</head>
+<body>
+    <nav id="global__navbar">
+        <div>
+            <a href="#">Conference</a>
+        </div>
+        <ul class="navbar__menubar">
+            <li class="menubar__item"><a href="room.html">회의목록</a></li>
+            <!--아래 두 항목은 관리자만 설정-->
+            <li class="menubar__item"><a href="#">관리</a></li>
+            <li class="menubar__item"><a href="#">조직도</a></li>
+        </ul>
+    </nav>
+    <section id="room">
+        <!-- 로그인/로그아웃(세션에따라) + 유저 아이콘(클리시 설정 팝업) -->
+        <div class="user__info">
+            <span>admin(관리자) /</span>
+            <a href="">로그아웃</a>
+        </div>
+        <div class="room__title">
+            <span>Conference List</span>
+        </div>
+        <div class="room__search">
+            <select>
+                <option>회의제목</option>
+                <option>회의ID</option>
+                <option>계정</option>
+            </select>
+            <input type="text">
+            <button>Search</button>
+        </div>
+        <button class="make__conference" onclick="open_conference_constructure()">회의생성</button>
+        <div class="room__list">
+            <div class="room__line">
+                <div class="room__icon__container">
+                    <i class="fas fa-power-off running__on"></i>
+                    <i class="fas fa-lock-open"></i>
+                </div>
+                <span class="line__title">점자프린터 사업 설명회<span class="session__id">#DAF-321</span></span>
+                <span>admin(관리자)</span>
+                <span>2022.4.12 17:13:47</span>
+                <div class="room__enter__container">
+                    <span>0/7</span>
+                    <i class="fas fa-user-plus enter__icon" onclick="open_popup()"></i>
+                </div>
+            </div>
+            <div class="room__line">
+                <div class="room__icon__container">
+                    <i class="fas fa-power-off running__on"></i>
+                    <i class="fas fa-lock-open"></i>
+                </div>
+                <span class="line__title">22년 연말 설명회<span class="session__id">#DWG-321</span></span>
+                <span>namu(나무지기)</span>
+                <span>2022.2.21 13:23:17</span>
+                <div class="room__enter__container">
+                    <span>0/5</span>
+                    <i class="fas fa-user-plus enter__icon" onclick="open_popup()"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="container">
+        <div class="popup">
+            <div class="popup__close" onclick="close_popup()">
+                X
+            </div>
+            <div class="popup__content">
+                <span>Enter Room Password</span>
+                <input type="password" placeholder="input room password">
+                <input type="button" value="인증" onclick="open_alert()">
+            </div>
+        </div>
+    </div>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Warning!</strong> <span>관련되지 않은 회의는 접속을 금지해주시길 바랍니다.</span>
+    </div>
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Warning!</strong> <span>패스워드는 9자리 이상의 특수문자와 영문자를 포함하여 주시길 바랍니다.</span>
+    </div>
+
+    <section class="constructure__container">
+        <div class="conference__constructure">
+            <span onclick="close_conference_constructure()">X</span>
+            <div class="constructure__title">
+                <span>회의생성</span>
+            </div>
+            <div class="constructure__content">
+                <div class="content__field">
+                    <span>회의주제</span>
+                    <input type="text" placeholder="회의주제를 입력해주세요">
+                </div>
+                <div class="content__box">
+                    <div class="content__field">
+                        <span>인원수</span>
+                        <select>
+                            <option>1명</option>
+                            <option>2명</option>
+                            <option>3명</option>
+                            <option>4명</option>
+                            <option>5명</option>
+                        </select>
+                    </div>
+                    <div class="content__field">
+                        <span>회의 공개 설정</span>
+                        <select>
+                            <option>비공개</option>
+                            <option>공개</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="content__box">
+                    <div class="content__field">
+                        <span>대기실 사용 설정</span>
+                        <select>
+                            <option>미사용</option>
+                            <option>사용</option>
+                        </select>
+                    </div>
+                    <div class="content__field">
+                        <span>회의 암호설정</span>
+                        <input type="text" placeholder="암호를 입력해주세요">
+                    </div>
+                </div>
+                <div class="content__field">
+                    <span>발급될 회의 ID</span>
+                    <input type="text" placeholder="CONF-AJHDUYASDKJ1237" disabled/>
+                </div>
+                <div class="content__submit">
+                    <input type="button" value="회의생성">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <script type="text/javascript">
+        function close_popup(){
+            let btn = document.querySelector(".container")
+            btn.style.display="none"
+        }
+
+        function open_popup(){
+            let btn = document.querySelector(".container")
+            btn.style.display="flex"
+        }
+
+        function open_alert(){
+            alert("Invalid Password");
+            close_popup();
+        }
+
+        function open_conference_constructure(){
+            let conf_popup = document.querySelector(".constructure__container") 
+            conf_popup.style.display = "flex";
+        }
+
+        function close_conference_constructure(){
+            let conf_popup = document.querySelector(".constructure__container") 
+            conf_popup.style.display = "none";
+        }
+
+        function init(){
+            close_conference_constructure()
+            close_popup()
+        }   
+
+
+        init();
+    </script>
+</body>
+</html>

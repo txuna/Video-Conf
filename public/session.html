@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--실질적인 방 using openvidu-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64ee844c0c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/global.css">
+    <link rel="stylesheet" href="../static/css/session.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Grape+Nuts&family=Patua+One&family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="global__navbar">
+        <div>
+            <a href="#">화상회의</a>
+        </div>
+        <!-- 로그인/로그아웃(세션에따라) + 유저 아이콘(클리시 설정 팝업) -->
+        <ul class="navbar__menubar">
+            <li class="menubar__item">로그인</li>
+            <li class="menubar__item">설정</li>
+        </ul>
+    </nav>
+
+    <section id="Area">
+        <div class="video__area">
+            <!--flex & wrapped 개수에 맞춰서 생성-->
+            <!--4개까지 크기 그대로, 4개 이상부터 크기 조절-->
+            <!--4개 이상부터 .screen__on width heigth 비율 실시간 수정-->
+            <div class="screens">
+                <div class="screens__one">
+                    <span>No Camera Found</span>
+                </div>
+                <div class="screens__one">
+                    <span>No Camera Found</span>
+                </div>
+                <div class="screens__one">
+                    <span>No Camera Found</span>
+                </div>
+                <div class="screens__one">
+                    <span>No Camera Found</span>
+                </div>
+            </div>
+            <div class="btns">
+                <button>Camera</button>
+                <button>Mike</button>
+                <button>Share</button>
+            </div>
+        </div>
+        <div class="chat__area">
+            <div class="chat__show">
+
+            </div>
+            <div class="chat__input">
+                <input type="text">
+                <button>전송</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

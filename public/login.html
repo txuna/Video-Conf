@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bfbc1ab4a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/global.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Grape+Nuts&family=Patua+One&family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <script src="../static/js/login.js" type="text/javascript" defer></script>
+    <title>Login</title>
+</head>
+<body>
+    <nav id="global__navbar">
+        <div>
+            <a href="#">Conference</a>
+        </div>
+        <!-- 로그인/로그아웃(세션에따라) + 유저 아이콘(클리시 설정 팝업) -->
+        <ul class="navbar__menubar">
+            <li class="menubar__item"><a href="login.html">로그인</a></li>
+            <li class="menubar__item"><a href="signup.html">회원가입</a></li>
+        </ul>
+    </nav>
+
+    <div class="alert__container">
+    </div>
+
+    <section class="login__container">
+        <div class="login__box">
+            <div class="login__title">
+                <span>Conference Login</span>
+            </div>
+            <div class="login__field">
+                <span>계정</span>
+                <input type="text" id="userid" placeholder="input your ID">
+            </div>
+            <div class="login__field">
+                <span>패스워드</span>
+                <input type="password" id="userpw" placeholder="input your password">
+            </div>
+            <div class="login__submit">
+                <input type="button" id="loginBtn" value="로그인">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
