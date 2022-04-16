@@ -68,7 +68,7 @@ function signup_request(){
         department : ${user_department.value}
         position : ${user_position.value}
     `)
-    
+    location.href = "login.html"
     return;
 }
 

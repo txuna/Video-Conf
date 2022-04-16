@@ -39,8 +39,7 @@ function login_request(){
         return; 
     }
 
-    console.log(userid.value)
-    console.log(userpw.value)
+    location.href = "room.html";
     return;
 }
 

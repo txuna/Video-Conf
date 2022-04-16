@@ -12,52 +12,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Grape+Nuts&family=Patua+One&family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <script src="../static/js/global.js" type="text/javascript" defer></script>
     <title>Document</title>
 </head>
 <body>
     <nav id="global__navbar">
         <div>
-            <a href="#">화상회의</a>
+            <a href="#">Conference</a>
+            <div>
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
-        <!-- 로그인/로그아웃(세션에따라) + 유저 아이콘(클리시 설정 팝업) -->
         <ul class="navbar__menubar">
-            <li class="menubar__item">로그인</li>
-            <li class="menubar__item">설정</li>
+            <li class="menubar__item"><a href="room.html">회의목록</a></li>
+            <!--아래 두 항목은 관리자만 설정-->
+            <li class="menubar__item"><a href="#">관리</a></li>
+            <li class="menubar__item"><a href="#">조직도</a></li>
         </ul>
     </nav>
+    <section id="container">
+        <div class="video__container">
+            <div class="screen__container">
 
-    <section id="Area">
-        <div class="video__area">
-            <!--flex & wrapped 개수에 맞춰서 생성-->
-            <!--4개까지 크기 그대로, 4개 이상부터 크기 조절-->
-            <!--4개 이상부터 .screen__on width heigth 비율 실시간 수정-->
-            <div class="screens">
-                <div class="screens__one">
-                    <span>No Camera Found</span>
-                </div>
-                <div class="screens__one">
-                    <span>No Camera Found</span>
-                </div>
-                <div class="screens__one">
-                    <span>No Camera Found</span>
-                </div>
-                <div class="screens__one">
-                    <span>No Camera Found</span>
-                </div>
             </div>
-            <div class="btns">
-                <button>Camera</button>
-                <button>Mike</button>
-                <button>Share</button>
+            <div class="option__container">
+
             </div>
         </div>
-        <div class="chat__area">
-            <div class="chat__show">
-
+        <div class="chat__container">
+            <div class="show__message">
+                <div class="message">
+                    <span>tuuna</span>
+                    <span>Hello world</span>
+                    <span>11:30 PM</span>
+                </div>
+                <div class="message">
+                    <span>Hannah</span>
+                    <span>New Message from hannah!</span>
+                    <span>11:32 PM</span>
+                </div>
+                <div class="message">
+                    <span>Hannah</span>
+                    <span>New Message from hannah!</span>
+                    <span>11:32 PM</span>
+                </div>
+                <div class="message">
+                    <span>Hannah</span>
+                    <span>New Message from hannah!</span>
+                    <span>11:32 PM</span>
+                </div>
             </div>
-            <div class="chat__input">
-                <input type="text">
-                <button>전송</button>
+            <div class="blank__message">
+                <button>Send</button>
+            </div>
+            <div class="write__message">
+                <textarea></textarea>
             </div>
         </div>
     </section>

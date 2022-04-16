@@ -56,6 +56,9 @@ a {
     text-decoration: none;
 }
 
+.nav__ham{
+    display:none;
+}
 
 #global__navbar{
     display:flex;
@@ -69,6 +72,10 @@ a {
     padding:8px;
 }
 
+#global__navbar div div{
+    display:none;
+}
+
 #global__navbar a{
     font-size:18px;
     font-weight: var(--weight-bold);
@@ -78,6 +85,7 @@ a {
 #global__navbar div a{
     font-size:24px;
     line-height: 56px;
+    font-weight: var(--weight-bold);
 }
 
 .navbar__menubar{
@@ -99,6 +107,29 @@ a {
         flex-direction: column;
         text-align: center;
         width:100%;
+    }
+
+    #global__navbar div{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    #global__navbar div div i{
+        color:var(--color-white);
+        position: relative;
+        font-size:24px;
+    }
+
+    #global__navbar div div{
+        transition: all 300ms ease;
+    }
+
+    #global__navbar div div:hover{
+        transform:scale(1.2);
+    }
+
+    #global__navbar div div{
+        display:block;
     }
 
     .navbar__menubar{

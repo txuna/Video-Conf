@@ -15,12 +15,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <script src="../static/js/global.js" type="text/javascript" defer></script>
+    <script src="../static/js/room.js" type="text/javascript" defer></script>
     <title>Rooms</title>
 </head>
 <body>
     <nav id="global__navbar">
         <div>
-            <a href="#">Conference</a>
+            <a href="room.html">Conference</a>
+            <div>
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
         <ul class="navbar__menubar">
             <li class="menubar__item"><a href="room.html">회의목록</a></li>
@@ -86,7 +91,7 @@
             <div class="popup__content">
                 <span>Enter Room Password</span>
                 <input type="password" placeholder="input room password">
-                <input type="button" value="인증" onclick="open_alert()">
+                <input type="button" value="인증" onclick="enter_room()">
             </div>
         </div>
     </div>
@@ -153,41 +158,5 @@
             </div>
         </div>
     </section>
-    
-    
-    <script type="text/javascript">
-        function close_popup(){
-            let btn = document.querySelector(".container")
-            btn.style.display="none";
-        }
-
-        function open_popup(){
-            let btn = document.querySelector(".container")
-            btn.style.display="flex";
-        }
-
-        function open_alert(){
-            alert("Invalid Password");
-            close_popup();
-        }
-
-        function open_conference_constructure(){
-            let conf_popup = document.querySelector(".constructure__container") 
-            conf_popup.style.display = "flex";
-        }
-
-        function close_conference_constructure(){
-            let conf_popup = document.querySelector(".constructure__container") 
-            conf_popup.style.display = "none";
-        }
-
-        function init(){
-            close_conference_constructure()
-            close_popup()
-        }   
-
-
-        init();
-    </script>
 </body>
 </html>
