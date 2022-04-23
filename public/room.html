@@ -44,13 +44,15 @@
             <span>Conference List</span>
         </div>
         <div class="room__search">
-            <select>
-                <option>회의제목</option>
-                <option>회의ID</option>
-                <option>계정</option>
-            </select>
             <input type="text">
-            <button>Search</button>
+            <div class="search__btns">
+                <select>
+                    <option>회의제목</option>
+                    <option>회의ID</option>
+                    <option>계정</option>
+                </select>
+                <button>Search</button>
+            </div>
         </div>
         <button class="make__conference" onclick="open_conference_constructure()">회의생성</button>
         <div class="room__list">

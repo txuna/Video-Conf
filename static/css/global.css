@@ -102,6 +102,13 @@ a {
     padding:6px;
 }
 
+@media screen and (min-width: 512px){
+    .navbar__menubar{
+        display:flex;
+        flex-direction: row;
+    }
+}
+
 @media screen and (max-width: 512px) {
     #global__navbar{
         flex-direction: column;
